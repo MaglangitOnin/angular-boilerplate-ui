@@ -44,7 +44,7 @@ export class AlertComponent implements OnInit, OnDestroy {
             if (event instanceof NavigationStart) {
                 this.alertService.clear(this.id);
             }
-        });
+        });   
     }
 
     ngOnDestroy() {

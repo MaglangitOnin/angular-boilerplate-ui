@@ -16,4 +16,4 @@ export enum AlertType {
     Error,
     Info,
     Warning
-}
+} 

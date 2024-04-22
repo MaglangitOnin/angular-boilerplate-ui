@@ -17,7 +17,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const { url, method, headers, body } = request;
         const alertService = this.alertService;
-
+ 
         return handleRoute();
 
         function handleRoute() {
@@ -386,10 +386,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 }
 
 export let fakeBackendProvider = {
-    // use fake backend in place of Http service for backend-less development
+    
     provide: HTTP_INTERCEPTORS,
     useClass: FakeBackendInterceptor,
     multi: true
 };
 
-// prince wilfie g. verame, ara ay sakpan balik
